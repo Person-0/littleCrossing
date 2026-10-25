@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dn6stqhh2flcm" path="res://assets/bg_front.png" id="1_5ucki"]
 [ext_resource type="Script" uid="uid://dqchsa780mi4r" path="res://scripts/menu.gd" id="1_ivjyr"]
 [ext_resource type="Texture2D" uid="uid://bo1apxlmxvm2h" path="res://assets/bg_back.png" id="2_ivjyr"]
+[ext_resource type="AudioStream" uid="uid://cy0xgc4ehqtyr" path="res://sounds/menu.wav" id="4_hl1yy"]
 
 [node name="Node2D" type="CanvasLayer" unique_id=632370405]
 
@@ -69,3 +70,8 @@ bbcode_enabled = true
 text = "[font_size=32][b]Play[/b][/font_size]"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="menubgm" type="AudioStreamPlayer2D" parent="Control" unique_id=929549201]
+stream = ExtResource("4_hl1yy")
+autoplay = true
+playback_type = 1

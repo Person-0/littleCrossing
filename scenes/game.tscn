@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dn6stqhh2flcm" path="res://assets/bg_front.png" id="2_p57ef"]
 [ext_resource type="Texture2D" uid="uid://jeh1idwu3unm" path="res://assets/bg_ground_base.png" id="4_p57ef"]
 [ext_resource type="Texture2D" uid="uid://clafibsaeen48" path="res://assets/bg_ground_crossing.png" id="5_u5sy4"]
+[ext_resource type="AudioStream" uid="uid://c0wqogrflgkjj" path="res://sounds/little-theme.wav" id="8_gee14"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u5sy4"]
 normal = Vector2(1, 0)
@@ -274,3 +275,8 @@ limit_right = 16000
 limit_bottom = 100
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="tinyguy/Camera2D" unique_id=2015454924]
+stream = ExtResource("8_gee14")
+autoplay = true
+playback_type = 1

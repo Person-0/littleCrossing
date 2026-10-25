@@ -4,6 +4,7 @@ extends Node2D
 @onready var bg_back = $bg_back
 @onready var bg_front = $bg_front
 @onready var player = $tinyguy/Camera2D
+@onready var audio = $tinyguy/Camera2D/bgm
 
 const LEGPAIR_HEIGHT = -280.0;
 const LEGPAIR_ITEM = preload("res://scenes/legpair.tscn")
@@ -22,6 +23,8 @@ func _ready() -> void:
 	for i in range(1,18):
 		add_leg(randi_range(0, 1), i * 900)
 	bgoffset = Vector2(bg_back.position.x, bg_front.position.x)
+	audio.play()
+	audio.finished.connect(audio.play)
 
 func _process(delta: float) -> void:
 	var pposx = player.get_screen_center_position().x - 320
