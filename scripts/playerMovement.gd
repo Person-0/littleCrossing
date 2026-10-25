@@ -61,4 +61,10 @@ func _physics_process(delta: float) -> void:
 			dashCooldownTimer = 0
 			canDash = true
 			
+	for i in get_slide_collision_count():
+		var body = get_slide_collision(i).get_collider()
+		var bodyName = body.name
+		if bodyName.substr(0, 3) == "leg":
+			print("GAMEOVER!!")
+			
 	move_and_slide()
