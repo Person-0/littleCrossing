@@ -6,7 +6,6 @@ extends Node2D
 const WALK_HEIGHT = 200
 const WALK_STEP = 0.025
 const WALK_ANGLE_MAX = 10
-const LEG_OFFSET = 0
 const WALK_SPEED = 0.6
 
 var xpos = 0
@@ -21,8 +20,7 @@ func leg_rot(num, legnum):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	leg1.position.x -= LEG_OFFSET
-	leg2.position.x += LEG_OFFSET
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

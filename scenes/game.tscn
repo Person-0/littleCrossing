@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://gj4lr4k66twj"]
 
-[ext_resource type="Texture2D" uid="uid://if8x3lq83b8v" path="res://assets/car.png" id="1_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://bo1apxlmxvm2h" path="res://assets/bg_back.png" id="1_iywne"]
 [ext_resource type="Texture2D" uid="uid://cypcn5havmnmv" path="res://assets/LilManWalk.png" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://iu3oaug1nm3s" path="res://scripts/playerMovement.gd" id="1_yqjtg"]
 [ext_resource type="Script" uid="uid://d4nyte0nw5dwf" path="res://scripts/walker.gd" id="2_iywne"]
+[ext_resource type="Texture2D" uid="uid://dn6stqhh2flcm" path="res://assets/bg_front.png" id="2_p57ef"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gee14"]
 atlas = ExtResource("1_uwrxv")
@@ -77,10 +78,15 @@ size = Vector2(49, 120)
 
 [node name="gameNode2d" type="Node2D" unique_id=628901147]
 
-[node name="bg" type="Sprite2D" parent="." unique_id=990508159]
-position = Vector2(953.5, -665.5)
-scale = Vector2(8.101562, 14.0078125)
-texture = ExtResource("1_lnu2h")
+[node name="bg_back" type="Sprite2D" parent="." unique_id=990508159]
+position = Vector2(520.0001, -257.07025)
+scale = Vector2(0.70208335, 0.6943143)
+texture = ExtResource("1_iywne")
+
+[node name="bg_front" type="Sprite2D" parent="." unique_id=926419417]
+position = Vector2(485.4999, -256.68005)
+scale = Vector2(0.66093737, 0.693185)
+texture = ExtResource("2_p57ef")
 
 [node name="floor" type="ColorRect" parent="." unique_id=1788643492]
 offset_left = -172.0
