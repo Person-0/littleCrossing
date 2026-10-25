@@ -4,10 +4,10 @@
 [ext_resource type="Script" uid="uid://laeqsmsg3fwa" path="res://scripts/legpair.gd" id="1_x48fu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x5sme"]
-size = Vector2(164, 6)
+size = Vector2(155, 6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x48fu"]
-size = Vector2(167.375, 8)
+size = Vector2(156, 8)
 
 [node name="legpair1" type="Node2D" unique_id=166506400]
 script = ExtResource("1_x48fu")
@@ -23,7 +23,7 @@ centered = false
 offset = Vector2(-140, -247)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leg1" unique_id=863468786]
-position = Vector2(-15, 360)
+position = Vector2(-17.5, 360)
 rotation = -3.1415925
 shape = SubResource("RectangleShape2D_x5sme")
 one_way_collision = true
@@ -40,7 +40,7 @@ centered = false
 offset = Vector2(-140, -247)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="leg2" unique_id=886286978]
-position = Vector2(-16.3125, 359)
+position = Vector2(-18, 359)
 rotation = -3.1415925
 shape = SubResource("RectangleShape2D_x48fu")
 one_way_collision = true

@@ -11,15 +11,21 @@ config_version=5
 [application]
 
 config/name="littleCrossing"
-run/main_scene="uid://gj4lr4k66twj"
+run/main_scene="uid://wiohymucfejc"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+global="*uid://btcjqswbbme5k"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/size/resizable=false
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [input]
 

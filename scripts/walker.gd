@@ -15,10 +15,12 @@ func add_leg(dir, pos):
 	legContainer.add_child(newleg)
 	newleg.position = Vector2(pos, LEGPAIR_HEIGHT)
 	newleg.changeLegDir(dir)
+	newleg.setMoveDir(dir)
 	return newleg
 
 func _ready() -> void:
-	var newleg = add_leg(1, 800)
+	for i in range(1,18):
+		add_leg(randi_range(0, 1), i * 900)
 	bgoffset = Vector2(bg_back.position.x, bg_front.position.x)
 
 func _process(delta: float) -> void:
