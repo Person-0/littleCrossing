@@ -66,5 +66,7 @@ func _physics_process(delta: float) -> void:
 		var bodyName = body.name
 		if bodyName.substr(0, 3) == "leg":
 			print("GAMEOVER!!")
+		elif bodyName == "end_body":
+			print("GAMEEND!!")
 			
 	move_and_slide()

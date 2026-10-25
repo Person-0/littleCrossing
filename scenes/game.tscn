@@ -5,6 +5,16 @@
 [ext_resource type="Script" uid="uid://iu3oaug1nm3s" path="res://scripts/playerMovement.gd" id="1_yqjtg"]
 [ext_resource type="Script" uid="uid://d4nyte0nw5dwf" path="res://scripts/walker.gd" id="2_iywne"]
 [ext_resource type="Texture2D" uid="uid://dn6stqhh2flcm" path="res://assets/bg_front.png" id="2_p57ef"]
+[ext_resource type="Texture2D" uid="uid://jeh1idwu3unm" path="res://assets/bg_ground_base.png" id="4_p57ef"]
+[ext_resource type="Texture2D" uid="uid://clafibsaeen48" path="res://assets/bg_ground_crossing.png" id="5_u5sy4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_u5sy4"]
+normal = Vector2(1, 0)
+distance = -101.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gee14"]
+normal = Vector2(-1, 0)
+distance = -16003.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gee14"]
 atlas = ExtResource("1_uwrxv")
@@ -105,12 +115,144 @@ position = Vector2(1737, -257)
 scale = Vector2(0.661, 0.693)
 texture = ExtResource("2_p57ef")
 
-[node name="floor" type="ColorRect" parent="." unique_id=1788643492]
-offset_left = -172.0
-offset_top = 61.0
-offset_right = 3036.0
-offset_bottom = 144.0
-color = Color(0, 0, 0, 1)
+[node name="ground" type="Node2D" parent="." unique_id=394822698]
+position = Vector2(0, -90)
+
+[node name="base_start" type="Sprite2D" parent="ground" unique_id=306238069]
+position = Vector2(-70.18812, 0)
+scale = Vector2(2.3762376, 1)
+texture = ExtResource("4_p57ef")
+
+[node name="base_end" type="Sprite2D" parent="ground" unique_id=1401061655]
+position = Vector2(15967, 0)
+scale = Vector2(2.1415546, 1)
+texture = ExtResource("4_p57ef")
+
+[node name="crossing" type="Sprite2D" parent="ground" unique_id=2125752719]
+position = Vector2(550, 0)
+texture = ExtResource("5_u5sy4")
+
+[node name="crossing2" type="Sprite2D" parent="ground" unique_id=216805947]
+position = Vector2(1534, 0)
+texture = ExtResource("5_u5sy4")
+
+[node name="crossing4" type="Sprite2D" parent="ground" unique_id=92090208]
+position = Vector2(3515, 0)
+texture = ExtResource("5_u5sy4")
+
+[node name="crossing3" type="Sprite2D" parent="ground" unique_id=1036377825]
+position = Vector2(2525, 0)
+texture = ExtResource("5_u5sy4")
+
+[node name="crossing5" type="Sprite2D" parent="ground" unique_id=406835485]
+position = Vector2(550, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(3950, 0)
+
+[node name="crossing6" type="Sprite2D" parent="ground" unique_id=1906130005]
+position = Vector2(1534, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(3950, 0)
+
+[node name="crossing7" type="Sprite2D" parent="ground" unique_id=1889494465]
+position = Vector2(3515, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(3950, 0)
+
+[node name="crossing8" type="Sprite2D" parent="ground" unique_id=1334269365]
+position = Vector2(2525, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(3950, 0)
+
+[node name="crossing9" type="Sprite2D" parent="ground" unique_id=781291785]
+position = Vector2(550, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(7900, 0)
+
+[node name="crossing10" type="Sprite2D" parent="ground" unique_id=175823564]
+position = Vector2(1534, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(7900, 0)
+
+[node name="crossing11" type="Sprite2D" parent="ground" unique_id=1594029442]
+position = Vector2(3515, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(7900, 0)
+
+[node name="crossing12" type="Sprite2D" parent="ground" unique_id=2049804200]
+position = Vector2(2525, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(7900, 0)
+
+[node name="crossing13" type="Sprite2D" parent="ground" unique_id=631009674]
+position = Vector2(550, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(7900, 0)
+
+[node name="crossing14" type="Sprite2D" parent="ground" unique_id=1695585740]
+position = Vector2(1534, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(7900, 0)
+
+[node name="crossing15" type="Sprite2D" parent="ground" unique_id=2072514487]
+position = Vector2(3515, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(7900, 0)
+
+[node name="crossing16" type="Sprite2D" parent="ground" unique_id=565806199]
+position = Vector2(2525, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(7900, 0)
+
+[node name="crossing17" type="Sprite2D" parent="ground" unique_id=1302912548]
+position = Vector2(550, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(11850, 0)
+
+[node name="crossing18" type="Sprite2D" parent="ground" unique_id=1038751941]
+position = Vector2(1534, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(11850, 0)
+
+[node name="crossing19" type="Sprite2D" parent="ground" unique_id=351480578]
+position = Vector2(3515, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(11850, 0)
+
+[node name="crossing20" type="Sprite2D" parent="ground" unique_id=881618828]
+position = Vector2(2525, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(11850, 0)
+
+[node name="crossing21" type="Sprite2D" parent="ground" unique_id=1668522259]
+position = Vector2(550, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(11850, 0)
+
+[node name="crossing22" type="Sprite2D" parent="ground" unique_id=447625713]
+position = Vector2(1534, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(11850, 0)
+
+[node name="crossing23" type="Sprite2D" parent="ground" unique_id=2063623511]
+position = Vector2(3515, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(11850, 0)
+
+[node name="crossing24" type="Sprite2D" parent="ground" unique_id=1998681567]
+position = Vector2(2525, 0)
+texture = ExtResource("5_u5sy4")
+offset = Vector2(11850, 0)
+
+[node name="start_body" type="StaticBody2D" parent="ground" unique_id=202817159]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/start_body" unique_id=1623186928]
+shape = SubResource("WorldBoundaryShape2D_u5sy4")
+
+[node name="end_body" type="StaticBody2D" parent="ground" unique_id=1395935872]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ground/end_body" unique_id=1445021152]
+shape = SubResource("WorldBoundaryShape2D_gee14")
 
 [node name="legsContainer" type="Node2D" parent="." unique_id=584485761]
 
@@ -128,6 +270,7 @@ shape = SubResource("RectangleShape2D_0tnpc")
 
 [node name="Camera2D" type="Camera2D" parent="tinyguy" unique_id=1378136634]
 limit_left = -100
+limit_right = 16000
 limit_bottom = 100
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
