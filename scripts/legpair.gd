@@ -10,14 +10,15 @@ const WALK_SPEED = 0.6
 
 var xpos = 0
 var moveDir = 1
+var variation = randi_range(0, 1) * PI
 
 func leg_height(num, legnum):
-	var val = (sin(num * WALK_STEP + (legnum * PI))) * WALK_HEIGHT
+	var val = (sin(num * WALK_STEP + (legnum * PI) + variation/2)) * WALK_HEIGHT
 	if val < 0:
 		val = 0
 	return val
 func leg_rot(num, legnum):
-	return sin(num * WALK_STEP * 2 + (legnum * PI/2)) * WALK_ANGLE_MAX
+	return sin(num * WALK_STEP * 2 + (legnum * PI/2) + variation) * WALK_ANGLE_MAX
 
 func setMoveDir(dir):
 	moveDir = 1 if dir == 1 else -1
