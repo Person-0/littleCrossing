@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://gj4lr4k66twj"]
 
+[ext_resource type="Texture2D" uid="uid://if8x3lq83b8v" path="res://assets/car.png" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cypcn5havmnmv" path="res://assets/LilManWalk.png" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://iu3oaug1nm3s" path="res://scripts/playerMovement.gd" id="1_yqjtg"]
 
@@ -50,7 +51,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p57ef")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": SubResource("AtlasTexture_u5sy4")
 }],
 "loop": true,
@@ -63,11 +64,10 @@ size = Vector2(62, 120)
 
 [node name="gameNode2d" type="Node2D" unique_id=628901147]
 
-[node name="bg" type="ColorRect" parent="." unique_id=79686831]
-offset_left = -6006.0
-offset_top = -3556.0
-offset_right = 5981.0
-offset_bottom = 3582.0
+[node name="bg" type="Sprite2D" parent="." unique_id=990508159]
+position = Vector2(590.0001, -180)
+scale = Vector2(18.062502, 6.421875)
+texture = ExtResource("1_lnu2h")
 
 [node name="floor" type="ColorRect" parent="." unique_id=1788643492]
 offset_left = -172.0
@@ -80,6 +80,7 @@ color = Color(0, 0, 0, 1)
 script = ExtResource("1_yqjtg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="tinyguy" unique_id=190115677]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_gee14")
 animation = &"walk"
 frame = 4
@@ -89,5 +90,8 @@ frame_progress = 0.49382928
 position = Vector2(6, 2)
 shape = SubResource("RectangleShape2D_0tnpc")
 
-[node name="Camera2D" type="Camera2D" parent="tinyguy" unique_id=1927147052]
-position = Vector2(418, -232)
+[node name="Camera2D" type="Camera2D" parent="tinyguy" unique_id=1378136634]
+limit_left = -100
+limit_bottom = 100
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
