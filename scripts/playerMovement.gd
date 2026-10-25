@@ -17,7 +17,9 @@ var dashCooldownTimer = 0
 
 func end_screen(text):
 	global.GAME_status = text
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	var tree = get_tree()
+	if tree:
+		tree.change_scene_to_file("res://scenes/menu.tscn")
 	
 func _physics_process(delta: float) -> void:
 	var deltaMS = delta * 1000
