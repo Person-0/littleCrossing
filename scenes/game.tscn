@@ -3,10 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://if8x3lq83b8v" path="res://assets/car.png" id="1_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cypcn5havmnmv" path="res://assets/LilManWalk.png" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://iu3oaug1nm3s" path="res://scripts/playerMovement.gd" id="1_yqjtg"]
-[ext_resource type="Texture2D" uid="uid://dycehh132xmyw" path="res://assets/feeet.png" id="2_lbhrr"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
-size = Vector2(235.5, 681.25)
+[ext_resource type="Script" uid="uid://d4nyte0nw5dwf" path="res://scripts/walker.gd" id="2_iywne"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gee14"]
 atlas = ExtResource("1_uwrxv")
@@ -93,30 +90,7 @@ offset_bottom = 144.0
 color = Color(0, 0, 0, 1)
 
 [node name="legsContainer" type="Node2D" parent="." unique_id=584485761]
-
-[node name="legpair1" type="Node2D" parent="legsContainer" unique_id=585271293]
-
-[node name="leg" type="StaticBody2D" parent="legsContainer/legpair1" unique_id=734270246]
-position = Vector2(750, -280)
-
-[node name="Sprite2D" type="Sprite2D" parent="legsContainer/legpair1/leg" unique_id=65057702]
-scale = Vector2(1, 1.3574219)
-texture = ExtResource("2_lbhrr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="legsContainer/legpair1/leg" unique_id=743366914]
-position = Vector2(-6.25, 4.375)
-shape = SubResource("RectangleShape2D_lbhrr")
-
-[node name="leg2" type="StaticBody2D" parent="legsContainer/legpair1" unique_id=18705362]
-position = Vector2(750, -280)
-
-[node name="Sprite2D" type="Sprite2D" parent="legsContainer/legpair1/leg2" unique_id=1483842080]
-scale = Vector2(1, 1.3574219)
-texture = ExtResource("2_lbhrr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="legsContainer/legpair1/leg2" unique_id=1704890929]
-position = Vector2(-6.25, 4.375)
-shape = SubResource("RectangleShape2D_lbhrr")
+script = ExtResource("2_iywne")
 
 [node name="tinyguy" type="CharacterBody2D" parent="." unique_id=448887954]
 script = ExtResource("1_yqjtg")

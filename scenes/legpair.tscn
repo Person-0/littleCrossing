@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dgknvgcv4n87v"]
+
+[ext_resource type="Texture2D" uid="uid://dycehh132xmyw" path="res://assets/feeet.png" id="1_hm6pn"]
+[ext_resource type="Script" uid="uid://laeqsmsg3fwa" path="res://scripts/legpair.gd" id="1_x48fu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x48fu"]
+size = Vector2(235.5, 681.25)
+
+[node name="legpair1" type="Node2D" unique_id=166506400]
+script = ExtResource("1_x48fu")
+
+[node name="leg" type="StaticBody2D" parent="." unique_id=388496686]
+position = Vector2(-100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="leg" unique_id=1845792252]
+scale = Vector2(1, 1.3574219)
+texture = ExtResource("1_hm6pn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leg" unique_id=863468786]
+position = Vector2(-6.25, 4.375)
+shape = SubResource("RectangleShape2D_x48fu")
+
+[node name="leg2" type="StaticBody2D" parent="." unique_id=529064844]
+position = Vector2(100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="leg2" unique_id=647027569]
+scale = Vector2(1, 1.3574219)
+texture = ExtResource("1_hm6pn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leg2" unique_id=886286978]
+position = Vector2(-6.25, 4.375)
+shape = SubResource("RectangleShape2D_x48fu")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=828874222]
