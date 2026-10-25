@@ -77,15 +77,32 @@ animations = [{
 size = Vector2(49, 120)
 
 [node name="gameNode2d" type="Node2D" unique_id=628901147]
+script = ExtResource("2_iywne")
 
-[node name="bg_back" type="Sprite2D" parent="." unique_id=990508159]
+[node name="bg_back" type="Node2D" parent="." unique_id=461514415]
+position = Vector2(-200, 0)
+
+[node name="bg_back_1" type="Sprite2D" parent="bg_back" unique_id=990508159]
 position = Vector2(520.0001, -257.07025)
 scale = Vector2(0.70208335, 0.6943143)
 texture = ExtResource("1_iywne")
 
-[node name="bg_front" type="Sprite2D" parent="." unique_id=926419417]
-position = Vector2(485.4999, -256.68005)
+[node name="bg_back_2" type="Sprite2D" parent="bg_back" unique_id=2012903779]
+position = Vector2(1883, -266)
+scale = Vector2(0.702, 0.694)
+texture = ExtResource("1_iywne")
+
+[node name="bg_front" type="Node2D" parent="." unique_id=945393354]
+position = Vector2(-200, 0)
+
+[node name="bg_front_1" type="Sprite2D" parent="bg_front" unique_id=926419417]
+position = Vector2(427.00003, -257)
 scale = Vector2(0.66093737, 0.693185)
+texture = ExtResource("2_p57ef")
+
+[node name="bg_front_2" type="Sprite2D" parent="bg_front" unique_id=1568842235]
+position = Vector2(1737, -257)
+scale = Vector2(0.661, 0.693)
 texture = ExtResource("2_p57ef")
 
 [node name="floor" type="ColorRect" parent="." unique_id=1788643492]
@@ -96,7 +113,6 @@ offset_bottom = 144.0
 color = Color(0, 0, 0, 1)
 
 [node name="legsContainer" type="Node2D" parent="." unique_id=584485761]
-script = ExtResource("2_iywne")
 
 [node name="tinyguy" type="CharacterBody2D" parent="." unique_id=448887954]
 script = ExtResource("1_yqjtg")
