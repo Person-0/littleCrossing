@@ -4,7 +4,7 @@ This is a tiny game where you're a small guy in a world where everything is huge
 
 ## Demo
 
-[Play the demo by clicking here!]()
+[Play the demo by clicking here!](https://littlecrossing.vercel.app/)
 
 <img src="repo_demo_imgs/game.png" width="512px">
 
