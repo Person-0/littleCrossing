@@ -11,7 +11,7 @@ func add_leg(dir, pos):
 	return newleg
 
 func _ready() -> void:
-	var newleg = add_leg(0, 800)
+	var newleg = add_leg(1, 800)
 
 func _process(delta: float) -> void:
 	pass

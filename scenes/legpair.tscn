@@ -4,20 +4,20 @@
 [ext_resource type="Script" uid="uid://laeqsmsg3fwa" path="res://scripts/legpair.gd" id="1_x48fu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x48fu"]
-size = Vector2(235.5, 681.25)
+size = Vector2(193, 673.25)
 
 [node name="legpair1" type="Node2D" unique_id=166506400]
 script = ExtResource("1_x48fu")
 
-[node name="leg" type="StaticBody2D" parent="." unique_id=388496686]
+[node name="leg1" type="StaticBody2D" parent="." unique_id=388496686]
 position = Vector2(-100, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="leg" unique_id=1845792252]
+[node name="Sprite2D" type="Sprite2D" parent="leg1" unique_id=1845792252]
 scale = Vector2(1, 1.3574219)
 texture = ExtResource("1_hm6pn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="leg" unique_id=863468786]
-position = Vector2(-6.25, 4.375)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leg1" unique_id=863468786]
+position = Vector2(-14.5, 0.375)
 shape = SubResource("RectangleShape2D_x48fu")
 
 [node name="leg2" type="StaticBody2D" parent="." unique_id=529064844]
